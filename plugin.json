@@ -1,0 +1,53 @@
+{
+  "name": "mcp-browser",
+  "version": "0.1.0",
+  "description": "Browser automation -- navigate, screenshot, click, type, scroll, evaluate JS, manage cookies/storage, and interact with web pages via headless browser",
+  "author": "yesMohanHere",
+  "license": "MIT",
+  "bin": {
+    "mcp-browser": "dist/server.js"
+  },
+  "entry": "dist/server.js",
+  "transport": "stdio",
+  "tools": [
+    "browser_navigate",
+    "browser_screenshot",
+    "browser_click",
+    "browser_type",
+    "browser_scroll",
+    "browser_evaluate",
+    "browser_form_submit",
+    "browser_file_download",
+    "browser_cookie_get",
+    "browser_cookie_set",
+    "browser_storage_get",
+    "browser_storage_set",
+    "browser_wait_for_selector",
+    "browser_get_text",
+    "browser_get_html",
+    "browser_go_back",
+    "browser_go_forward",
+    "browser_get_url",
+    "browser_close"
+  ],
+  "categories": ["browser", "automation", "testing", "web"],
+  "keywords": [
+    "browser",
+    "automation",
+    "playwright",
+    "headless",
+    "screenshot",
+    "web-testing",
+    "scraping",
+    "mcp"
+  ],
+  "homepage": "https://github.com/yesMohanHere/mcp-browser",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yesMohanHere/mcp-browser.git"
+  },
+  "requirements": {
+    "node": ">=20.0.0",
+    "os": ["macos", "linux", "windows"]
+  }
+}
