@@ -1,17 +1,26 @@
 {
-  "name": "mcp-browser",
+  "name": "@yesmohanhere/mcp-browser",
   "version": "0.1.0",
-  "description": "Browser automation MCP server — navigate, screenshot, click, type, scroll, and evaluate JS in headless browsers via natural language",
+  "description": "Browser automation MCP server -- navigate, screenshot, click, type, scroll, and evaluate JS in headless browsers via natural language",
   "type": "module",
   "main": "dist/server.js",
+  "types": "dist/server.d.ts",
   "bin": {
     "mcp-browser": "dist/server.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/server.js",
-    "prepare": "npm run build"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",
@@ -20,20 +29,32 @@
     "playwright",
     "headless",
     "screenshot",
-    "web-testing"
+    "web-testing",
+    "mcp-server"
   ],
-  "author": "",
+  "author": "yesMohanHere",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0",
-    "playwright": "^1.52.0",
-    "zod": "^3.25.0"
+    "playwright": "^1.52.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.0",
-    "typescript": "^5.8.0"
+    "typescript": "^5.8.0",
+    "vitest": "^3.0.0"
   },
   "engines": {
     "node": ">=20.0.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yesMohanHere/mcp-browser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yesMohanHere/mcp-browser/issues"
+  },
+  "homepage": "https://github.com/yesMohanHere/mcp-browser#readme"
 }
