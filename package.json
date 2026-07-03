@@ -1,0 +1,39 @@
+{
+  "name": "mcp-browser",
+  "version": "0.1.0",
+  "description": "Browser automation MCP server — navigate, screenshot, click, type, scroll, and evaluate JS in headless browsers via natural language",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "mcp-browser": "dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/server.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "browser",
+    "automation",
+    "playwright",
+    "headless",
+    "screenshot",
+    "web-testing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "playwright": "^1.52.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
